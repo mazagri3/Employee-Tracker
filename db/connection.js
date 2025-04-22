@@ -1,21 +1,29 @@
 const { Pool } = require('pg');
+require('dotenv').config();
 
-// Create a connection pool to the PostgreSQL database
+// Create a connection pool to the Neon database
 const pool = new Pool({
-  user: 'postgres',     // default PostgreSQL user
-  password: 'root', // default PostgreSQL password
-  host: 'localhost',    // PostgreSQL host
-  port: 5432,           // PostgreSQL port
-  database: 'employee_tracker' // database name
+  connectionString: process.env.DB_URL
 });
 
 // Test the database connection
 pool.connect((err, client, release) => {
   if (err) {
     console.error('Error connecting to the database:', err.stack);
+    console.error('Please make sure the database is accessible.');
+    process.exit(1);
   } else {
     console.log('Connected to the database successfully!');
-    release();
+    // Test a simple query
+    client.query('SELECT 1', (err, result) => {
+      release();
+      if (err) {
+        console.error('Error testing database query:', err.stack);
+        process.exit(1);
+      } else {
+        console.log('Database query test successful!');
+      }
+    });
   }
 });
 
@@ -24,6 +32,7 @@ module.exports = pool;
 
 // Comment for instructor:
 // Created a database connection file using the pg module
+// Used simple credentials for development
 // Used a connection pool for better performance
 // Included a test connection to verify database connectivity
-// NOTE: You may need to update the user and password values to match your local PostgreSQL configuration 
+// NOTE: In production, use environment variables for credentials 
