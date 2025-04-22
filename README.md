@@ -10,7 +10,7 @@ Built using Node.js, Inquirer, and PostgreSQL, this Content Management System (C
 
 ## Video Walkthrough
 
-[Click here to view the walkthrough video](link-to-your-video)
+[Click here to view the walkthrough video](https://drive.google.com/file/d/1BW7FACp9zU0QwUdjUHPi1-RoGd-xFz01/view?usp=drive_link)
 
 ## Features
 
