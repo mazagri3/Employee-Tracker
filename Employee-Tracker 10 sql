@@ -1,0 +1,7 @@
+# Database configuration
+DB_URL=postgresql://neondb_owner:npg_fvRPWe80IFBx@ep-green-bush-a4k8f1jg-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require
+DB_USER=postgres
+DB_PASSWORD=8070ee56-afd0-4495-97d7-41d44568f33f
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=employee_tracker 
