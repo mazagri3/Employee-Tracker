@@ -1,0 +1,32 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "A command-line application to manage a company's employee database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazagri3/employee-tracker.git"
+  },
+  "keywords": [
+    "employee",
+    "tracker",
+    "cli",
+    "postgresql",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mazagri3/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/mazagri3/employee-tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "pg": "^8.11.0",
+    "console.table": "^0.10.0"
+  }
+} 
